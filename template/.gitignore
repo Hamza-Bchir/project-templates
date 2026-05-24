@@ -8,5 +8,3 @@ wandb/
 outputs/.hydra
 *.ckpt
 *.pt
-.
-copier.yml
