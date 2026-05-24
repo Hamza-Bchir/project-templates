@@ -1,0 +1,52 @@
+# ~~ Questions ~~ #
+project_name:
+  type: str
+  help: "Your project name (e.g 'agi-from-scratch')"
+
+package_name:
+  type: str
+  help: "Python package name (agi_from_scratch, importable)"
+  default: "{{ project_name | replace('-', '_') | lower }}"
+
+description:
+  type: str
+  help: "Project description:"
+  default: "DESCRIPTION_PLACEHOLDER"
+
+author_name:
+  type: str
+  help: "Your name"
+  default: "Hamza B'chir"
+
+author_email:
+  type: str
+  help: "Your email"
+  default: "bchir.hamza@umontreal.ca"
+
+python_version:
+  type: str
+  help: "Python version"
+  default: "3.12"
+  choices:
+    - "3.10"
+    - "3.11"
+    - "3.12"
+    - "3.13"
+
+use_hydra:
+  type: bool
+  help: "Include Hydra for config management ?"
+  default: true
+
+use_wandb:
+  type: bool
+  help: "Include Weights & Biases integration ?"
+  default: true
+
+license:
+  type: str
+  help: "License"
+  default: "MIT"
+  choices:
+    - "MIT"
+    - "None"

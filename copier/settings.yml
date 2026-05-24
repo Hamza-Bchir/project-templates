@@ -1,0 +1,9 @@
+_min_copier_version: "9.15.1"
+_subdirectory: "template"
+_answers_file: ".copier-answers.yml"
+_templates_suffix: ".jinja"
+
+
+_exclude:
+  - "{% if not use_hydra %}configs{% else %}__NEVER_MATCH__{% endif %}"
+  - "{% if license == 'None' %}LICENSE.jinja{% else %}__NEVER_MATCH__{% endif %}"

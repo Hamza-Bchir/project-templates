@@ -1,0 +1,9 @@
+_tasks:
+  - ["git", "init", "--initial-branch=main"]
+  - ["uv", "venv", "--python", "{{ python_version }}"]
+  - ["uv", "sync", "--all-extras"]
+  - ["uv", "run", "pre-commit", "install"]
+  - ["git", "add", "."]
+  - ["powershell", "-NoProfile", "-Command", "uv run pre-commit run --all-files; exit 0"]
+  - ["git", "add", "."]
+  - ["git", "commit", "-m", "Initial commit"]

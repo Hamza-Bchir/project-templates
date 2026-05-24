@@ -1,0 +1,32 @@
+# {{ project_name }}
+{{ description }}
+
+## Setup
+
+```bash
+git clone GITHUB_URL
+cd {{ project_name }}
+
+uv sync --extra-dev
+uv run pre-commit install
+source .venv/bin/activate
+```
+
+conda create -n {{ project_name }} python={{ python_version }} -y
+conda activate {{ projec_name }}
+pip install -e ".[dev]"
+pre-commit install
+```
+
+For development workflow, tooling decisions, and conventions, see [DEVELOPMENT.md]
+
+---
+
+## Project Structure
+
+---
+
+
+## References & Acknowledgments
+
+- **Project structure**: Our repository layout is inspired by the [Python ML Research Template](https://github.com/CLAIRE-Labo/python-ml-research-template) from CLAIRE Lab (EPFL), which provides best practices for reproducible ML projects with proper packaging, pre-commit hooks, and experiment management.
