@@ -1,4 +1,5 @@
 _tasks:
+  - ["python", "-c", "import pathlib; p=pathlib.Path('.env'); p.write_text(p.read_text().replace('__PROJECT_ROOT__', str(pathlib.Path.cwd().resolve())))"]
   - ["git", "init", "--initial-branch=main"]
   - ["uv", "venv", "--python", "{{ python_version }}"]
   - ["uv", "sync", "--all-extras"]

@@ -9,13 +9,7 @@ cd {{ project_name }}
 
 uv sync --extra-dev
 uv run pre-commit install
-source .venv/bin/activate
-```
-
-conda create -n {{ project_name }} python={{ python_version }} -y
-conda activate {{ projec_name }}
-pip install -e ".[dev]"
-pre-commit install
+./.venv/Scripts/Activate.ps1
 ```
 
 For development workflow, tooling decisions, and conventions, see [DEVELOPMENT.md]

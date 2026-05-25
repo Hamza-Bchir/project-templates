@@ -50,3 +50,9 @@ license:
   choices:
     - "MIT"
     - "None"
+
+CUDA_VISIBLE_DEVICES:
+  type: int
+  help: "Number of visible cuda devices to be set in the env file"
+  default: "0"
+

@@ -1,0 +1,10 @@
+seeding:
+  seed: 0
+  deterministic: false 
+
+name: {{ project_name }}_run      #Change name
+hydra:
+  run:
+    dir: ${oc.env:PROJECT_ROOT}/outputs/.hydra/${name}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  job:
+    chdir: false
