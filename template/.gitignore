@@ -1,10 +1,13 @@
+.*
+!.gitignore
+test*
+!tests/
+!tests/**
 __pycache__/
-.venv/
 uv.lock
 *.pyc
-.env
-.ipynb_checkpoints/
 wandb/
 outputs/.hydra
 *.ckpt
 *.pt
+data

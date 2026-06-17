@@ -26,22 +26,12 @@ author_email:
 python_version:
   type: str
   help: "Python version"
-  default: "3.12"
+  default: "3.14"
   choices:
-    - "3.10"
     - "3.11"
     - "3.12"
     - "3.13"
-
-use_hydra:
-  type: bool
-  help: "Include Hydra for config management ?"
-  default: true
-
-use_wandb:
-  type: bool
-  help: "Include Weights & Biases integration ?"
-  default: true
+    - "3.14"
 
 license:
   type: str
